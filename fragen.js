@@ -38,7 +38,6 @@ const allQuestions = [
         explanation: "Der 'ping'-Befehl sendet kleine Datenpakete, um die Erreichbarkeit eines Ziels zu prüfen.",
         difficulty: "leicht"
     },
-
     {
         question: "Wofür steht die Abkürzung 'IP' (im Kontext von IP-Adresse)?",
         options: ["Internet Provider", "Internal Process", "Internet Protocol", "Information Path"],
@@ -74,7 +73,6 @@ const allQuestions = [
         explanation: "HTTP ist das Standardprotokoll zur Übertragung von Webseiten (HyperText) im Internet.",
         difficulty: "leicht"
     },
-
     {
         question: "Was ist der Hauptunterschied zwischen HTTP und HTTPS?",
         options: ["HTTPS ist nur für Smartphones", "HTTPS verschlüsselt die Datenübertragung", "HTTP ist schneller, weil es aktueller ist", "HTTPS lädt nur Bilder herunter"],
@@ -110,7 +108,6 @@ const allQuestions = [
         explanation: "Jedes geöffnete HTML-Tag muss auch wieder geschlossen werden. Das gesamte Dokument endet mit </html>.",
         difficulty: "leicht"
     },
-
     {
         question: "In welchem HTML-Tag steht der Titel der Webseite, der z.B. oben im Browser-Tab angezeigt wird?",
         options: ["<title>", "<header>", "<h1>", "<name>"],
@@ -146,7 +143,6 @@ const allQuestions = [
         explanation: "POP3 (Post Office Protocol) wird verwendet, um E-Mails von einem Server herunterzuladen (abzurufen).",
         difficulty: "leicht"
     },
-
     {
         question: "Welche der folgenden Kombinationen enthält typische Endgeräte in einem Heimnetzwerk?",
         options: ["Router, Switch, Gateway", "Smartphone, Laptop, Tablet", "DNS-Server, Webserver, Mailserver", "Glasfaserkabel, WLAN-Antenne, Modem"],
@@ -222,7 +218,6 @@ const allQuestions = [
         explanation: "Die Adressen .100, .101, .102, .103, .104 und .105 können vergeben werden. Das sind genau 6 Stück.",
         difficulty: "mittel"
     },
-
     {
         question: "Vergleiche die Funktion eines DNS-Servers mit einem Gegenstand aus dem echten Leben. Welcher Vergleich passt am besten?",
         options: ["Eine Kaffeemaschine", "Ein Tresor", "Ein Telefonbuch", "Eine Straßenkarte"],
@@ -258,7 +253,6 @@ const allQuestions = [
         explanation: "Links werden mit dem 'Anchor'-Tag <a> erstellt. Das Ziel wird im Attribut 'href' angegeben.",
         difficulty: "mittel"
     },
-
     {
         question: "Beim Einrichten eines E-Mail-Kontos brauchst du POP3 und SMTP. Wofür ist SMTP zuständig?",
         options: ["Zum Empfangen der Mails", "Zum Verschlüsseln der Mails", "Zum Versenden der Mails", "Zum Löschen der Mails"],
@@ -294,7 +288,6 @@ const allQuestions = [
         explanation: "TCP (Transmission Control Protocol) prüft, ob Pakete angekommen sind und fordert sie bei Verlust neu an. Es ist daher sehr zuverlässig.",
         difficulty: "mittel"
     },
-
     {
         question: "Welches Protokoll eignet sich laut Skript besser für Videostreaming, weil es schneller (aber unzuverlässiger) ist?",
         options: ["TCP", "UDP", "HTTP", "POP3"],
@@ -330,7 +323,6 @@ const allQuestions = [
         explanation: "Das Netz basiert auf Arbeitsteilung. Der Client (z.B. dein Handy) 'fragt' nach der Seite, der Server 'antwortet' mit dem HTML-Code.",
         difficulty: "mittel"
     },
-
     {
         question: "Du willst in Filius eine eigene Webseite hosten. Welche zwei Software-Programme solltest du auf dem Server-PC installieren?",
         options: ["Befehlszeile & Ping", "Webserver & Text-Editor", "E-Mail-Server & Webbrowser", "DNS-Server & DHCP-Server"],
@@ -406,7 +398,6 @@ const allQuestions = [
         explanation: "Da die Webseite in viele kleine Pakete zerlegt wurde, muss der Client sie anhand ihrer Sequenznummern (TCP) zusammensetzen.",
         difficulty: "schwer"
     },
-
     {
         question: "Wenn du einen DNS-Server in Filius einrichtest, musst du einen 'A-Record' anlegen. Welche Informationen verknüpfst du dort?",
         options: ["MAC-Adresse und IP-Adresse", "Domainname (URL) und IP-Adresse", "Benutzername und Passwort", "HTML und CSS"],
@@ -442,7 +433,6 @@ const allQuestions = [
         explanation: "Paketverlust bedeutet, dass die ICMP-Anfragen ihr Ziel nicht erreicht haben oder das Ziel nicht antworten durfte (Firewall).",
         difficulty: "schwer"
     },
-
     {
         question: "Finde den Fehler im HTML: <p> Hier ist ein Link: <a src=\"kontakt.html\">Kontakt</a> </p>",
         options: ["Das <p> Tag fehlt am Ende.", "Das Attribut 'src' ist falsch. Bei Links muss es 'href' heißen.", "Man darf Links nicht in <p> Tags setzen.", "Das Wort 'Kontakt' muss großgeschrieben werden."],
@@ -478,7 +468,6 @@ const allQuestions = [
         explanation: "Die Subnetzmaske (dreimal 255) gibt an, dass die ersten drei Zahlen (192.168.1) das Netz definieren. Die 23 ist die spezifische Geräte-Nummer (Host-ID).",
         difficulty: "schwer"
     },
-
     {
         question: "Ein Client im Filius-Netzwerk hat 'DHCP zur Konfiguration verwenden' aktiviert, bekommt aber die IP '0.0.0.0'. Woran liegt das?",
         options: ["0.0.0.0 ist eine gültige, perfekte IP.", "Es wurde vergessen, den DHCP-Server einzurichten oder ihn im Aktionsmodus zu starten.", "Die Firewall blockiert ping.", "Das Kabel ist falsch herum eingesteckt."],
@@ -514,7 +503,6 @@ const allQuestions = [
         explanation: "Der Client muss die IP-Adresse des DNS-Servers kennen, um seine DNS-Anfragen dorthin schicken zu können.",
         difficulty: "schwer"
     },
-
     {
         question: "Ein Webserver schickt als Antwort reinen HTML-Code (Text) zurück. Welche Software sorgt dafür, dass dieser Text als bunte Seite angezeigt wird?",
         options: ["Das Betriebssystem", "Der Text-Editor", "Der Webbrowser (Client)", "Die Grafikkarte"],
