@@ -1,374 +1,343 @@
-const allQuestions = [
-    
-    /* ==========================================
-       KATEGORIE: LEICHT (10 Fragen)
-       ========================================== */
+const questions = [
+    // ==========================================
+    // SCHWIERIGKEITSGRAD: LEICHT
+    // ==========================================
     {
         question: "In welchem Filius-Modus kann man neue Rechner platzieren und mit Kabeln verbinden?",
         options: [
-            "Aktionsmodus", 
-            "Entwurfsmodus", 
-            "Testmodus", 
+            "Aktionsmodus",
+            "Entwurfsmodus",
+            "Testmodus",
             "Dokumentationsmodus"
         ],
-        correct: 1, // B
-        explanation: "Der Entwurfsmodus (Hammer/Schraubenzieher-Symbol) ist für den Aufbau des Netzwerks zuständig. Der Aktionsmodus (Play-Symbol) ist für den Software-Test.",
-        difficulty: "leicht"
-    },
-    {
-        question: "Welches Gerät verbindet mehrere PCs in einem kabelgebundenen lokalen Netzwerk?",
-        options: [
-            "Switch", 
-            "DNS-Server", 
-            "Modem", 
-            "Text-Editor"
-        ],
-        correct: 0, // A
-        explanation: "Ein Switch verteilt die Datenpakete innerhalb eines lokalen Netzwerks gezielt an die angeschlossenen Geräte.",
-        difficulty: "leicht"
-    },
-    {
-        question: "Welches Gerät ermöglicht es Endgeräten, sich drahtlos (WLAN) mit dem Netzwerk zu verbinden?",
-        options: [
-            "Kabel", 
-            "Switch", 
-            "Accesspoint", 
-            "Befehlszeile"
-        ],
-        correct: 2, // C
-        explanation: "Ein Accesspoint fungiert als Brücke zwischen dem drahtlosen WLAN und dem kabelgebundenen LAN.",
-        difficulty: "leicht"
-    },
-    {
-        question: "Woran erkennt man in der Filius-Simulation, dass die Kabel erfolgreich Daten übertragen?",
-        options: [
-            "Sie werden rot", 
-            "Sie werden unsichtbar", 
-            "Sie blinken blau", 
-            "Der Datenfluss wird grün dargestellt"
-        ],
-        correct: 3, // D
-        explanation: "Filius visualisiert den aktiven Datenaustausch im Aktionsmodus durch grün aufleuchtende Verbindungen.",
-        difficulty: "leicht"
-    },
-    {
-        question: "Wer oder was stellt in einem Netzwerk angeforderte Inhalte bereit (z. B. eine Webseite)?",
-        options: [
-            "Der Router", 
-            "Der Server", 
-            "Der Client", 
-            "Der Provider"
-        ],
-        correct: 1, // B
-        explanation: "Im Client-Server-Modell antwortet der Server auf die Anfragen der Clients und stellt die Daten bereit.",
-        difficulty: "leicht"
-    },
-    {
-        question: "Was benötigt jeder Rechner zwingend, um direkt in einem Netzwerk angesprochen werden zu können?",
-        options: [
-            "Eine eigene Webseite", 
-            "Ein E-Mail-Programm", 
-            "Eine eindeutige IP-Adresse", 
-            "Einen Accesspoint"
-        ],
-        correct: 2, // C
-        explanation: "Die IP-Adresse ist wie eine Hausnummer im Netzwerk zwingend erforderlich, um Pakete zuzustellen.",
-        difficulty: "leicht"
-    },
-    {
-        question: "Aus welchen Geräten besteht typischerweise ein Heimnetz (z. B. laut Benedikts Referat)?",
-        options: [
-            "Webserver und Großrechner", 
-            "Endgeräte (Smartphone, Laptop) und Heimrouter", 
-            "Provider und DNS-Server", 
-            "Nur aus Switches"
-        ],
-        correct: 1, // B
-        explanation: "Ein Heimnetz besteht meist aus den Endgeräten der Nutzer und dem kombinierten Heimrouter als Übergang ins Internet.",
-        difficulty: "leicht"
-    },
-    {
-        question: "Wie nennt man das Programm auf dem Client, mit dem man Webseiten aufruft?",
-        options: [
-            "Switch", 
-            "Befehlszeile", 
-            "Webbrowser", 
-            "Ping"
-        ],
-        correct: 2, // C
-        explanation: "Der Webbrowser (z. B. Chrome, Safari) sendet HTTP-Anfragen und interpretiert die HTML-Antworten des Webservers.",
-        difficulty: "leicht"
+        correctAnswer: "Entwurfsmodus",
+        difficulty: "Leicht"
     },
     {
         question: "Wo muss man in Filius klicken, um Software (z. B. einen Webbrowser) zu installieren?",
         options: [
-            "Auf das Kabel", 
-            "Auf 'Software-Installation' auf dem jeweiligen Rechner", 
-            "Auf den Datenaustausch", 
+            "Auf das Kabel",
+            "Auf \"Software-Installation\" auf dem jeweiligen Rechner",
+            "Auf den Datenaustausch",
             "Auf den Schieberegler"
         ],
-        correct: 1, // B
-        explanation: "Ein Klick auf den Rechner öffnet das Menü, in dem man unter 'Software-Installation' Programme wie die Befehlszeile installieren kann.",
-        difficulty: "leicht"
+        correctAnswer: "Auf \"Software-Installation\" auf dem jeweiligen Rechner",
+        difficulty: "Leicht"
+    },
+    {
+        question: "In der Realität zeigen blinkende LEDs an, dass Netzwerkkarten arbeiten. Wie wird im Aktionsmodus von Filius dargestellt, dass ein Kabel erfolgreich Daten überträgt?",
+        options: [
+            "Sie werden rot",
+            "Sie werden unsichtbar",
+            "Sie blinken blau",
+            "Der Datenfluss wird durch ein grünes Aufleuchten dargestellt"
+        ],
+        correctAnswer: "Der Datenfluss wird durch ein grünes Aufleuchten dargestellt",
+        difficulty: "Leicht"
+    },
+    {
+        question: "Was benötigt jeder Rechner zwingend, um direkt in einem Netzwerk angesprochen werden zu können?",
+        options: [
+            "Eine eigene Webseite",
+            "Ein E-Mail-Programm",
+            "Eine eindeutige IP-Adresse",
+            "Einen Accesspoint"
+        ],
+        correctAnswer: "Eine eindeutige IP-Adresse",
+        difficulty: "Leicht"
+    },
+    {
+        question: "Welches Gerät verbindet mehrere PCs in einem kabelgebundenen lokalen Netzwerk?",
+        options: [
+            "Switch",
+            "DNS-Server",
+            "Modem",
+            "Text-Editor"
+        ],
+        correctAnswer: "Switch",
+        difficulty: "Leicht"
+    },
+    {
+        question: "Welches Gerät ermöglicht es Endgeräten, sich drahtlos (WLAN) mit dem Netzwerk zu verbinden?",
+        options: [
+            "Kabel",
+            "Switch",
+            "Accesspoint",
+            "Befehlszeile"
+        ],
+        correctAnswer: "Accesspoint",
+        difficulty: "Leicht"
+    },
+    {
+        question: "Was ist der grundlegende Unterschied zwischen WLAN und LAN?",
+        options: [
+            "WLAN ist immer schneller als LAN.",
+            "LAN verbindet Geräte über physische Kabel, während WLAN eine kabellose (drahtlose) Verbindung über Funkwellen herstellt.",
+            "WLAN wird nur für Handys genutzt, LAN nur für Drucker.",
+            "LAN benötigt keine IP-Adressen, WLAN schon."
+        ],
+        correctAnswer: "LAN verbindet Geräte über physische Kabel, während WLAN eine kabellose (drahtlose) Verbindung über Funkwellen herstellt.",
+        difficulty: "Leicht"
+    },
+    {
+        question: "Wer oder was stellt in einem Netzwerk angeforderte Inhalte bereit (z. B. eine Webseite)?",
+        options: [
+            "Der Router",
+            "Der Server",
+            "Der Client",
+            "Der Provider"
+        ],
+        correctAnswer: "Der Server",
+        difficulty: "Leicht"
+    },
+    {
+        question: "Wie nennt man das Programm auf dem Client, mit dem man Webseiten aufruft?",
+        options: [
+            "Switch",
+            "Befehlszeile",
+            "Webbrowser",
+            "Ping"
+        ],
+        correctAnswer: "Webbrowser",
+        difficulty: "Leicht"
+    },
+    {
+        question: "Aus welchen Geräten besteht typischerweise ein Heimnetz?",
+        options: [
+            "Webserver und Großrechner",
+            "Endgeräte (Smartphone, Laptop) und Heimrouter",
+            "Provider und DNS-Server",
+            "Nur aus Switches"
+        ],
+        correctAnswer: "Endgeräte (Smartphone, Laptop) und Heimrouter",
+        difficulty: "Leicht"
+    },
+
+    // ==========================================
+    // SCHWIERIGKEITSGRAD: MITTEL
+    // ==========================================
+    {
+        question: "Welcher Befehl wird in der Befehlszeile genutzt, um die Erreichbarkeit eines anderen Rechners zu testen?",
+        options: [
+            "connect",
+            "test",
+            "ping",
+            "send"
+        ],
+        correctAnswer: "ping",
+        difficulty: "Mittel"
     },
     {
         question: "Welches Gerät leitet Daten von einem Netzwerk in ein anderes (z. B. vom Heimnetz ins Internet)?",
         options: [
-            "Client", 
-            "Router", 
-            "Switch", 
+            "Client",
+            "Router",
+            "Switch",
             "Accesspoint"
         ],
-        correct: 1, // B
-        explanation: "Der Router (Vermittlungsrechner) verbindet unterschiedliche Netzwerke miteinander und sucht den Weg zum Ziel.",
-        difficulty: "leicht"
-    },
-
-    /* ==========================================
-       KATEGORIE: MITTEL (10 Fragen)
-       ========================================== */
-    {
-        question: "Welcher Befehl wird in der Befehlszeile genutzt, um die Erreichbarkeit eines anderen Rechners zu testen?",
-        options: [
-            "connect", 
-            "test", 
-            "ping", 
-            "send"
-        ],
-        correct: 2, // C
-        explanation: "Der ping-Befehl sendet kleine Testpakete (ICMP), um zu prüfen, ob die Verbindung zu einer IP-Adresse klappt.",
-        difficulty: "mittel"
-    },
-    {
-        question: "Was ist die Hauptaufgabe eines DNS-Servers (Domain Name Server)?",
-        options: [
-            "E-Mails speichern", 
-            "Uhrzeiten synchronisieren", 
-            "URLs (Namen) mit IP-Adressen verknüpfen", 
-            "Webseiten farbig machen"
-        ],
-        correct: 2, // C
-        explanation: "DNS fungiert als das Telefonbuch des Internets und übersetzt Namen wie www.google.de in die IP-Adresse des Servers.",
-        difficulty: "mittel"
-    },
-    {
-        question: "Was ist der Vorteil eines DHCP-Servers im Netzwerk?",
-        options: [
-            "Er druckt Dokumente aus", 
-            "Er übernimmt automatisch die Vergabe von IP-Adressen an Clients", 
-            "Er blockiert Viren", 
-            "Er macht Kabel überflüssig"
-        ],
-        correct: 1, // B
-        explanation: "DHCP (Dynamic Host Configuration Protocol) spart Zeit und Fehler, da man die IP-Adressen nicht mehr manuell eintippen muss.",
-        difficulty: "mittel"
-    },
-    {
-        question: "Welches Protokoll wird für den sicheren, verschlüsselten Aufruf von Webseiten verwendet?",
-        options: [
-            "HTTP", 
-            "NTP", 
-            "IPP", 
-            "HTTPS"
-        ],
-        correct: 3, // D
-        explanation: "Das 'S' in HTTPS steht für 'Secure'. Es verschlüsselt die Verbindung, damit Daten unterwegs nicht mitgelesen werden können.",
-        difficulty: "mittel"
-    },
-    {
-        question: "Welches Protokoll wird standardmäßig zum Abrufen von E-Mails von einem Server verwendet?",
-        options: [
-            "POP (POP3)", 
-            "HTTP", 
-            "NTP", 
-            "IPP"
-        ],
-        correct: 0, // A
-        explanation: "POP3 (Post Office Protocol) wird genutzt, um E-Mails vom Server herunterzuladen (abzuholen).",
-        difficulty: "mittel"
-    },
-    {
-        question: "Welches Protokoll ist für die Synchronisation der Uhrzeit zuständig?",
-        options: [
-            "HTTP", 
-            "POP", 
-            "NTP", 
-            "IPP"
-        ],
-        correct: 2, // C
-        explanation: "NTP (Network Time Protocol) sorgt dafür, dass die Systemuhren von Computern in einem Netzwerk synchron laufen.",
-        difficulty: "mittel"
-    },
-    {
-        question: "Welches Protokoll überträgt Druckaufträge im Netzwerk?",
-        options: [
-            "IPP", 
-            "NTP", 
-            "HTTP", 
-            "DNS"
-        ],
-        correct: 0, // A
-        explanation: "IPP steht für 'Internet Printing Protocol' und steuert den Druckvorgang über das Netzwerk.",
-        difficulty: "mittel"
+        correctAnswer: "Router",
+        difficulty: "Mittel"
     },
     {
         question: "Wie sieht in Filius typischerweise eine lokale IP-Adresse für einen Client aus?",
         options: [
-            "www.filius.de", 
-            "192.168.0.10", 
-            "MAC:AB:CD", 
+            "www.filius.de",
+            "192.168.0.10",
+            "MAC:AB:CD",
             "8.8.8.8"
         ],
-        correct: 1, // B
-        explanation: "Adressen, die mit 192.168... beginnen, sind typische private (lokale) IP-Adressen für Heim- und Schulnetzwerke.",
-        difficulty: "mittel"
+        correctAnswer: "192.168.0.10",
+        difficulty: "Mittel"
     },
     {
-        question: "Was beschreibt das 'Routing' beim Senden von Datenpaketen?",
+        question: "Was ist die Hauptaufgabe eines DNS-Servers (Domain Name Server)?",
         options: [
-            "Die Umwandlung von Text in Bilder", 
-            "Das automatische Installieren von Software", 
-            "Das Finden des nächsten Wegabschnitts für das Paket", 
-            "Das Vergeben von IP-Adressen"
+            "E-Mails speichern",
+            "Uhrzeiten synchronisieren",
+            "URLs (Namen) mit IP-Adressen verknüpfen",
+            "Webseiten farbig machen"
         ],
-        correct: 2, // C
-        explanation: "Router leiten Pakete Schritt für Schritt (Routing) durch verschiedene Netze ans Ziel, da meist keine direkte Verbindung besteht.",
-        difficulty: "mittel"
+        correctAnswer: "URLs (Namen) mit IP-Adressen verknüpfen",
+        difficulty: "Mittel"
+    },
+    {
+        question: "Was ist der Vorteil eines DHCP-Servers im Netzwerk?",
+        options: [
+            "Er druckt Dokumente aus",
+            "Er übernimmt automatisch die Vergabe von IP-Adressen an Clients",
+            "Er blockiert Viren",
+            "Er macht Kabel überflüssig"
+        ],
+        correctAnswer: "Er übernimmt automatisch die Vergabe von IP-Adressen an Clients",
+        difficulty: "Mittel"
+    },
+    {
+        question: "Welches Protokoll wird für den sicheren, verschlüsselten Aufruf von Webseiten verwendet?",
+        options: [
+            "HTTP",
+            "NTP",
+            "IPP",
+            "HTTPS"
+        ],
+        correctAnswer: "HTTPS",
+        difficulty: "Mittel"
+    },
+    {
+        question: "Welches Protokoll wird standardmäßig zum Abrufen von E-Mails von einem Server verwendet?",
+        options: [
+            "POP (POP3)",
+            "HTTP",
+            "NTP",
+            "IPP"
+        ],
+        correctAnswer: "POP (POP3)",
+        difficulty: "Mittel"
+    },
+    {
+        question: "Welches Protokoll ist für die Synchronisation der Uhrzeit zuständig?",
+        options: [
+            "HTTP",
+            "POP",
+            "NTP",
+            "IPP"
+        ],
+        correctAnswer: "NTP",
+        difficulty: "Mittel"
+    },
+    {
+        question: "Welches Protokoll überträgt Druckaufträge im Netzwerk?",
+        options: [
+            "IPP",
+            "NTP",
+            "HTTP",
+            "DNS"
+        ],
+        correctAnswer: "IPP",
+        difficulty: "Mittel"
     },
     {
         question: "Was sendet der Webserver als Antwort an den Client zurück, damit dieser die Seite anzeigen kann?",
         options: [
-            "Einen Ping-Befehl", 
-            "Den Namen des Routers", 
-            "Die MAC-Adresse des Switches", 
+            "Einen Ping-Befehl",
+            "Den Namen des Routers",
+            "Die MAC-Adresse des Switches",
             "Datenpakete, die der Browser zur Webseite zusammensetzt (HTML, Bilder)"
         ],
-        correct: 3, // D
-        explanation: "Der Server schickt die Einzelteile (Code, Bilder) in Paketen, die der Webbrowser dann visuell rendert.",
-        difficulty: "mittel"
+        correctAnswer: "Datenpakete, die der Browser zur Webseite zusammensetzt (HTML, Bilder)",
+        difficulty: "Mittel"
     },
 
-    /* ==========================================
-       KATEGORIE: SCHWER (10 Fragen)
-       ========================================== */
+    // ==========================================
+    // SCHWIERIGKEITSGRAD: SCHWER
+    // ==========================================
     {
-        question: "Wofür steht die Abkürzung 'ttl', die bei einem erfolgreichen Ping-Test auftaucht?",
+        question: "Wie genau werden große Informationen (z. B. eine Webseite) über das Internet geschickt?",
         options: [
-            "Time to Load", 
-            "Time to Live", 
-            "Total Transfer Limit", 
+            "Als ein einziger, riesiger Block",
+            "Zerlegt in viele einzelne Datenpakete, die am Ziel wieder zusammengesetzt werden",
+            "Nur über direkte, ununterbrochene Glasfaserkabel ohne Router dazwischen",
+            "Ausschließlich über das POP-Protokoll"
+        ],
+        correctAnswer: "Zerlegt in viele einzelne Datenpakete, die am Ziel wieder zusammengesetzt werden",
+        difficulty: "Schwer"
+    },
+    {
+        question: "Was beschreibt das \"Routing\" beim Senden von Datenpaketen?",
+        options: [
+            "Die Umwandlung von Text in Bilder",
+            "Das automatische Installieren von Software",
+            "Das Finden des nächsten Wegabschnitts für das Paket",
+            "Das Vergeben von IP-Adressen"
+        ],
+        correctAnswer: "Das Finden des nächsten Wegabschnitts für das Paket",
+        difficulty: "Schwer"
+    },
+    {
+        question: "Wofür steht die Abkürzung \"ttl\", die bei einem erfolgreichen Ping-Test auftaucht?",
+        options: [
+            "Time to Load",
+            "Time to Live",
+            "Total Transfer Limit",
             "Text to Link"
         ],
-        correct: 1, // B
-        explanation: "Time to Live (Lebenszeit). Es verhindert, dass Pakete bei einem Fehler endlos im Netzwerk im Kreis wandern, indem sie irgendwann gelöscht werden.",
-        difficulty: "schwer"
+        correctAnswer: "Time to Live",
+        difficulty: "Schwer"
     },
     {
-        question: "Wie nennt man das Datenpaket im ICMP-Protokoll, das als Anfrage ('Ping') weggeschickt wird?",
+        question: "Wenn du zu Hause über dein Smartphone eine Webseite aufrufst: Welches Netzwerkgerät nimmt die Anfrage in der Regel als allererstes entgegen?",
         options: [
-            "Echo Request", 
-            "Echo Reply", 
-            "ARP Request", 
-            "HTTP Get"
+            "Der Heimrouter",
+            "Der DNS-Server im Internet",
+            "Der Switch des Internetanbieters",
+            "Ein Vermittlungsrechner in den USA"
         ],
-        correct: 0, // A
-        explanation: "Der ping-Befehl sendet einen 'Echo Request' (Wörtlich: Echo-Anfrage) an das Zielgerät.",
-        difficulty: "schwer"
+        correctAnswer: "Der Heimrouter",
+        difficulty: "Schwer"
     },
     {
-        question: "Was gibt die Angabe 'icmp_seq' im Terminalfenster bei einem Ping an?",
+        question: "Welche Funktion übernimmt der \"Internetanbieter\" (Provider) beim Senden von Daten aus dem Heimnetzwerk in das Internet?",
         options: [
-            "Die Laufzeit des Pakets", 
-            "Die fortlaufende Nummer des Datenpakets", 
-            "Die Adresse des Empfängers", 
-            "Den Port des Routers"
+            "Er übersetzt die Webadresse in eine IP-Adresse.",
+            "Er verbindet das Heimnetzwerk (Haushalte, Schulen) mit weiteren, übergeordneten Netzen.",
+            "Er liefert die HTML-Dateien für den Webbrowser.",
+            "Er verschlüsselt die Datenpakete mit HTTPS."
         ],
-        correct: 1, // B
-        explanation: "'seq' steht für Sequence (Reihenfolge). Die Pakete werden durchnummeriert, um Verluste oder falsche Reihenfolgen zu erkennen.",
-        difficulty: "schwer"
+        correctAnswer: "Er verbindet das Heimnetzwerk (Haushalte, Schulen) mit weiteren, übergeordneten Netzen.",
+        difficulty: "Schwer"
     },
     {
-        question: "Wie nennt man das Datenpaket, das als Antwort auf einen Ping ('Pong') zurückkommt?",
+        question: "Wer ist beim Aufrufen einer Webseite dafür zuständig, die einzelnen erhaltenen Daten (wie Texte, Bilder, Farben) zur endgültigen Ansicht zusammenzubauen?",
         options: [
-            "Echo Request", 
-            "Echo Reply", 
-            "DNS Response", 
-            "ARP Reply"
+            "Der Switch",
+            "Der Heimrouter",
+            "Der DNS-Server",
+            "Der Webbrowser auf dem Client"
         ],
-        correct: 1, // B
-        explanation: "Die erfolgreiche Antwort des Zielrechners auf einen 'Echo Request' heißt 'Echo Reply' (Echo-Antwort).",
-        difficulty: "schwer"
+        correctAnswer: "Der Webbrowser auf dem Client",
+        difficulty: "Schwer"
     },
     {
-        question: "Woraus besteht ein E-Mail-Konto, das man in Filius auf dem E-Mail-Server anlegen muss, zwingend?",
+        question: "Welcher bildliche Vergleich beschreibt den Unterschied zwischen einer unverschlüsselten Verbindung (HTTP) und einer verschlüsselten Verbindung (HTTPS) am besten?",
         options: [
-            "IP-Adresse und MAC-Adresse", 
-            "Domainname und Port", 
-            "Benutzername und Passwort", 
-            "Ping und Pong"
+            "HTTP ist wie eine offene Postkarte (für jeden lesbar), HTTPS wie ein verschlossener Brief.",
+            "HTTP ist wie ein verschlossener Tresor, HTTPS wie ein Tresor ohne Schlüssel.",
+            "HTTP ist ein Telefongespräch, HTTPS ein Briefwechsel.",
+            "HTTP ist ein Briefumschlag mit falscher Adresse."
         ],
-        correct: 2, // C
-        explanation: "Damit der Mailserver weiß, wem das Postfach gehört, muss man sich mit einem Benutzernamen und Passwort authentifizieren.",
-        difficulty: "schwer"
+        correctAnswer: "HTTP ist wie eine offene Postkarte (für jeden lesbar), HTTPS wie ein verschlossener Brief.",
+        difficulty: "Schwer"
     },
     {
-        question: "Welchen Port trägt man in Filius standardmäßig für den SMTP-Server ein (zum Senden von Mails)?",
+        question: "Was bedeutet es typischerweise, wenn ein Gerät eine IP-Adresse hat, die mit \"192.168...\" beginnt?",
         options: [
-            "110", 
-            "25", 
-            "80", 
-            "55555"
+            "Das Gerät ist ein DNS-Server.",
+            "Die Adresse kennzeichnet das Gerät in einem lokalen Netzwerk (privater IP-Bereich).",
+            "Das Gerät steht physisch in New York.",
+            "Die Internetverbindung ist verschlüsselt."
         ],
-        correct: 1, // B
-        explanation: "Port 25 ist in der Regel für das Simple Mail Transfer Protocol (SMTP) reserviert, welches Mails verschickt.",
-        difficulty: "schwer"
+        correctAnswer: "Die Adresse kennzeichnet das Gerät in einem lokalen Netzwerk (privater IP-Bereich).",
+        difficulty: "Schwer"
     },
     {
-        question: "Welchen Port trägt man in Filius standardmäßig für den POP3-Server ein (zum Empfangen von Mails)?",
+        question: "Um einzelne Rechner in einem Rechnernetz eindeutig ansprechen zu können, gibt es neben der IP-Adresse noch eine zweite fest etablierte Art der Adressierung. Wie lautet diese?",
         options: [
-            "25", 
-            "80", 
-            "110", 
-            "443"
+            "HTTP-Adresse",
+            "MAC-Adresse",
+            "DNS-Adresse",
+            "Ping-Adresse"
         ],
-        correct: 2, // C
-        explanation: "Port 110 wird klassischerweise für das Post Office Protocol (POP3) verwendet, um Mails abzuholen.",
-        difficulty: "schwer"
+        correctAnswer: "MAC-Adresse",
+        difficulty: "Schwer"
     },
     {
-        question: "Was muss bei der Einrichtung eines DHCP-Servers zwingend festgelegt werden, damit er Adressen verteilen kann?",
+        question: "Warum gibt es in Rechnernetzen sowohl MAC- als auch IP-Adressen?",
         options: [
-            "Eine Webadresse", 
-            "Ein Passwort für das WLAN", 
-            "Die MAC-Adresse des Routers", 
-            "Ein Adressbereich (Untergrenze und Obergrenze der IP-Adressen)"
+            "MAC-Adressen werden nur für WLAN benötigt, IP-Adressen für Kabel.",
+            "Die MAC-Adresse identifiziert das Gerät (Hardware) weltweit eindeutig, die IP-Adresse kennzeichnet den aktuellen Standort des Geräts im Netzwerk (Routing).",
+            "Die MAC-Adresse wird für Webseiten genutzt, die IP-Adresse für E-Mails.",
+            "Es gibt keinen Unterschied, es sind nur zwei Begriffe für dasselbe."
         ],
-        correct: 3, // D
-        explanation: "Der DHCP-Server benötigt einen definierten IP-Pool, aus dem er freie Adressen an die Clients verteilen darf.",
-        difficulty: "schwer"
-    },
-    {
-        question: "Wie kann man die Datenflussgeschwindigkeit in Filius verändern, um den Weg der Pakete genau zu beobachten?",
-        options: [
-            "Über einen Schieberegler im Aktionsmodus", 
-            "Durch Eingabe von 'speed' in der Befehlszeile", 
-            "Das geht nur im Entwurfsmodus", 
-            "Durch Ändern der Kabel"
-        ],
-        correct: 0, // A
-        explanation: "Im Aktionsmodus gibt es oben einen Schieberegler (in %). So kann man die Simulation drosseln und die Datenaustausch-Tabelle in Ruhe lesen.",
-        difficulty: "schwer"
-    },
-    {
-        question: "Was passiert (laut Skript/Unterricht), wenn man einen Ping-Befehl mit einer falschen oder unvollständigen IP-Adresse eingibt?",
-        options: [
-            "Filius stürzt ab", 
-            "Die Anfrage geht automatisch an den Router", 
-            "Filius korrigiert die Adresse selbst", 
-            "Man erhält eine Rückmeldung, dass das Ziel/die Adresse fehlerhaft oder nicht erreichbar ist"
-        ],
-        correct: 3, // D
-        explanation: "Wenn die IP-Adresse ungültig ist oder nicht existiert, schlägt der Ping fehl und meldet z.B. 'Zieladresse nicht erreichbar'.",
-        difficulty: "schwer"
+        correctAnswer: "Die MAC-Adresse identifiziert das Gerät (Hardware) weltweit eindeutig, die IP-Adresse kennzeichnet den aktuellen Standort des Geräts im Netzwerk (Routing).",
+        difficulty: "Schwer"
     }
 ];
