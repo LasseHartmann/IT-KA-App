@@ -1,0 +1,45 @@
+/* STREAMING_CHUNK:Allgemeine Body- und Layout-Styles /
+body {
+font-family: 'Inter', sans-serif;
+background-color: #f3f4f6; / Entspricht dem Tailwind gray-100 */
+}
+/* Hilfsklasse zum Ausblenden von Elementen */
+.hide {
+display: none !important;
+}
+/* STREAMING_CHUNK:Definition der Einblend-Animationen /
+/ Custom animations */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(10px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+/* Klasse, die an Elemente angehängt wird, um die Animation abzuspielen */
+.fade-in {
+animation: fadeIn 0.4s ease-out forwards;
+}
+/* STREAMING_CHUNK:Styling für die Antwort-Buttons (Optionen) */
+.option-btn {
+transition: all 0.2s ease;
+}
+/* Hover-Effekt nur anwenden, wenn der Button nicht deaktiviert ist */
+.option-btn:hover:not(:disabled) {
+transform: translateY(-2px);
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+/* STREAMING_CHUNK:Farbliche Hervorhebung für richtige und falsche Antworten /
+.correct-ans {
+background-color: #10b981 !important; / Tailwind emerald-500 */
+color: white !important;
+border-color: #10b981 !important;
+}
+.wrong-ans {
+background-color: #ef4444 !important; /* Tailwind red-500 */
+color: white !important;
+border-color: #ef4444 !important;
+}
