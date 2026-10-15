@@ -58,12 +58,12 @@
         </div>
 
         <!-- ================= QUIZ SCREEN ================= -->
-        <div id="quiz-screen" class="p-8 hide">
+        <div id="quiz-screen" class="p-8 hidden">
             <!-- Quiz Info Bar -->
             <div class="flex justify-between items-center mb-6 border-b pb-4">
                 <span id="question-counter" class="text-lg font-semibold text-gray-600">Frage 1 / 10</span>
-                <span id="timer-display" class="text-lg font-bold text-red-500 hide"><i class="fa-solid fa-clock mr-1"></i> 05:00</span>
-                <span id="score-display" class="text-lg font-semibold text-emerald-600 hide">Punkte: 0</span>
+                <span id="timer-display" class="text-lg font-bold text-red-500 hidden"><i class="fa-solid fa-clock mr-1"></i> 05:00</span>
+                <span id="score-display" class="text-lg font-semibold text-emerald-600 hidden">Punkte: 0</span>
             </div>
 
             <!-- Progress Bar -->
@@ -80,21 +80,21 @@
             </div>
 
             <!-- Feedback Box (Lernmodus) -->
-            <div id="feedback-box" class="hide bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mb-8 fade-in">
+            <div id="feedback-box" class="hidden bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mb-8 fade-in">
                 <p id="feedback-title" class="font-bold mb-1"></p>
                 <p id="feedback-text" class="text-sm text-gray-700"></p>
             </div>
 
             <!-- Controls -->
             <div class="flex justify-end">
-                <button id="next-btn" onclick="handleNext()" class="hide bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors">
+                <button id="next-btn" onclick="handleNext()" class="hidden bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors">
                     Nächste Frage
                 </button>
             </div>
         </div>
 
         <!-- ================= RESULT SCREEN ================= -->
-        <div id="result-screen" class="p-8 text-center hide fade-in">
+        <div id="result-screen" class="p-8 text-center hidden fade-in">
             <div id="result-icon" class="text-6xl mb-4">🏆</div>
             <h2 class="text-3xl font-bold mb-2">Quiz beendet!</h2>
             <p id="result-message" class="text-gray-600 mb-8">Gut gemacht, schauen wir uns dein Ergebnis an.</p>
