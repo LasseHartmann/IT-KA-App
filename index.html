@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taskmaster | Informatik Kurzarbeit</title>
+    <title>Networkmaster | Informatik Kurzarbeit</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
@@ -138,16 +138,16 @@
 
     <div id="start-screen" class="w-full max-w-2xl fade-in flex flex-col items-center">
         
-        <h1 class="font-serif text-5xl md:text-6xl text-tm-gold mb-2 text-center tracking-wide shadow-black drop-shadow-lg">TASKMASTER</h1>
-        <p class="font-serif text-xl text-gray-300 mb-12 italic text-center">Die Informatik-Kurzarbeit</p>
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-tm-gold mb-2 text-center tracking-wide shadow-black drop-shadow-lg">NETWORKMASTER</h1>
+        <p class="font-serif text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 italic text-center">Die Informatik-Kurzarbeit</p>
 
-        <div class="paper p-8 w-full relative rounded-sm text-tm-ink transform rotate-1">
-            <h2 class="font-serif text-2xl mb-6 text-center border-b border-gray-400 pb-4">Die Aufgabe</h2>
+        <div class="paper p-5 sm:p-8 w-full relative rounded-sm text-tm-ink transform rotate-1 mb-10">
+            <h2 class="font-serif text-xl sm:text-2xl mb-6 text-center border-b border-gray-400 pb-4">Die Aufgabe</h2>
             
-            <div class="font-typewriter text-lg space-y-6">
+            <div class="font-typewriter text-base sm:text-lg space-y-6">
                 <div>
                     <p class="mb-2 font-bold">1. Wähle deine Vorbereitung:</p>
-                    <div class="flex gap-4">
+                    <div class="flex flex-col sm:flex-row gap-4">
                         <button onclick="selectMode('lern')" id="card-lern" class="flex-1 border-2 border-tm-ink border-dashed p-3 hover:bg-gray-200 transition-colors">
                             Trainings-Lager <br><span class="text-sm text-gray-600">(Lernmodus)</span>
                         </button>
@@ -169,46 +169,46 @@
             </div>
 
             <!-- Wachssiegel zum Starten -->
-            <div class="mt-16 flex justify-center h-10">
-                <button onclick="startApp()" id="start-btn" disabled class="wax-seal absolute -bottom-10 w-28 h-28 rounded-full text-tm-paper font-serif font-bold text-4xl transition-all disabled:opacity-50 disabled:cursor-not-allowed z-10 flex items-center justify-center">
-                    TM
+            <div class="mt-12 sm:mt-16 flex justify-center h-10">
+                <button onclick="startApp()" id="start-btn" disabled class="wax-seal absolute -bottom-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full text-tm-paper font-serif font-bold text-3xl sm:text-4xl transition-all disabled:opacity-50 disabled:cursor-not-allowed z-10 flex items-center justify-center">
+                    NM
                 </button>
             </div>
         </div>
     </div>
 
     <div id="quiz-screen" class="w-full max-w-2xl hidden">
-        <div class="paper p-6 md:p-12 relative rounded-sm text-tm-ink paper-drop">
+        <div class="paper p-5 sm:p-8 md:p-12 relative rounded-sm text-tm-ink paper-drop">
             
             <!-- Header: Aufgabe & Timer -->
-            <div class="flex justify-between items-end border-b-2 border-tm-ink pb-2 mb-6">
+            <div class="flex justify-between items-end border-b-2 border-tm-ink pb-2 mb-4 sm:mb-6">
                 <div>
-                    <p class="font-serif font-bold text-tm-red uppercase tracking-widest text-sm mb-1">Aufgabe <span id="question-counter">1</span></p>
-                    <p id="points-display" class="font-typewriter text-sm font-bold bg-tm-ink text-tm-paper px-2 py-0.5 inline-block">5 PUNKTE</p>
+                    <p class="font-serif font-bold text-tm-red uppercase tracking-widest text-xs sm:text-sm mb-1">Aufgabe <span id="question-counter">1</span></p>
+                    <p id="points-display" class="font-typewriter text-xs sm:text-sm font-bold bg-tm-ink text-tm-paper px-2 py-0.5 inline-block">5 PUNKTE</p>
                 </div>
                 <div class="text-right">
-                    <span id="score-display" class="font-typewriter text-lg font-bold block hidden">Punkte: 0</span>
-                    <span id="timer-display" class="font-typewriter text-xl font-bold hidden"><i class="fa-solid fa-clock"></i> 05:00</span>
+                    <span id="score-display" class="font-typewriter text-base sm:text-lg font-bold block hidden">Punkte: 0</span>
+                    <span id="timer-display" class="font-typewriter text-lg sm:text-xl font-bold hidden"><i class="fa-solid fa-clock"></i> 05:00</span>
                 </div>
             </div>
 
             <!-- Aufgabe -->
-            <h2 id="question-text" class="font-typewriter text-xl md:text-2xl leading-relaxed mb-4">Hier steht die Frage?</h2>
+            <h2 id="question-text" class="font-typewriter text-lg sm:text-xl md:text-2xl leading-relaxed mb-4">Hier steht die Frage?</h2>
             
-            <p id="timer-text" class="font-serif italic text-tm-red mb-8">Deine Zeit startet... jetzt.</p>
+            <p id="timer-text" class="font-serif italic text-tm-red mb-6 sm:mb-8 text-sm sm:text-base">Deine Zeit startet... jetzt.</p>
 
             <!-- Antwortmöglichkeiten -->
-            <div id="options-container" class="space-y-2 font-typewriter text-lg mb-8 pl-2 border-l-2 border-gray-300">
+            <div id="options-container" class="space-y-2 font-typewriter text-base sm:text-lg mb-8 pl-2 border-l-2 border-gray-300">
                 <!-- Werden via JS eingefügt -->
             </div>
 
             <!-- Feedback Bereich -->
-            <div id="feedback-box" class="hidden relative mt-12 border-t-2 border-dashed border-gray-400 pt-8 min-h-[100px]">
-                <div id="stamp-feedback" class="absolute -top-6 right-4 font-serif text-3xl opacity-90 stamp"></div>
-                <p id="feedback-text" class="font-typewriter text-gray-700 leading-relaxed"></p>
+            <div id="feedback-box" class="hidden relative mt-8 sm:mt-12 border-t-2 border-dashed border-gray-400 pt-8 min-h-[100px]">
+                <div id="stamp-feedback" class="absolute -top-6 right-4 font-serif text-2xl sm:text-3xl opacity-90 stamp"></div>
+                <p id="feedback-text" class="font-typewriter text-sm sm:text-base text-gray-700 leading-relaxed"></p>
                 
                 <div class="mt-8 text-right">
-                    <button id="next-btn" onclick="handleNext()" class="bg-tm-ink text-tm-paper font-typewriter font-bold px-6 py-3 hover:bg-tm-red transition-colors shadow-lg">
+                    <button id="next-btn" onclick="handleNext()" class="w-full sm:w-auto bg-tm-ink text-tm-paper font-typewriter font-bold px-6 py-3 hover:bg-tm-red transition-colors shadow-lg">
                         NÄCHSTE AUFGABE ->
                     </button>
                 </div>
@@ -218,22 +218,29 @@
 
     <div id="result-screen" class="w-full max-w-2xl hidden fade-in flex flex-col items-center">
         
-        <div class="paper p-10 w-full relative rounded-sm text-tm-ink text-center transform rotate-1">
-            <h2 class="font-serif text-4xl mb-2 border-b-2 border-tm-ink pb-4">Das Urteil</h2>
+        <div class="paper p-6 sm:p-10 w-full relative rounded-sm text-tm-ink text-center transform rotate-1">
+            <h2 class="font-serif text-3xl sm:text-4xl mb-2 border-b-2 border-tm-ink pb-4">Das Urteil</h2>
             
-            <div class="my-8">
-                <p id="result-message" class="font-typewriter text-xl mb-6">Greg Davies hat deine Antworten bewertet.</p>
+            <div class="my-6 sm:my-8">
+                <p id="result-message" class="font-typewriter text-lg sm:text-xl mb-6">Der Networkmaster hat deine Antworten bewertet.</p>
                 
-                <div class="inline-block border-4 border-tm-ink p-6 relative">
-                    <p class="font-typewriter text-sm uppercase tracking-widest absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#F4EFE6] px-2 font-bold">Punkte</p>
-                    <div class="text-6xl font-serif font-bold text-tm-red" id="final-score">0</div>
-                    <div class="text-lg font-typewriter mt-2 border-t border-tm-ink pt-2" id="final-max">von 0 möglichen</div>
+                <div class="inline-block border-4 border-tm-ink p-4 sm:p-6 relative">
+                    <p class="font-typewriter text-xs sm:text-sm uppercase tracking-widest absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#F4EFE6] px-2 font-bold">Punkte</p>
+                    <div class="text-5xl sm:text-6xl font-serif font-bold text-tm-red" id="final-score">0</div>
+                    <div class="text-base sm:text-lg font-typewriter mt-2 border-t border-tm-ink pt-2" id="final-max">von 0 möglichen</div>
                 </div>
             </div>
 
-            <button onclick="resetApp()" class="mt-6 bg-tm-ink text-tm-paper font-typewriter font-bold px-8 py-4 hover:bg-tm-red transition-colors shadow-lg w-full md:w-auto">
+            <button onclick="resetApp()" class="mt-4 sm:mt-6 bg-tm-ink text-tm-paper font-typewriter font-bold px-6 sm:px-8 py-3 sm:py-4 hover:bg-tm-red transition-colors shadow-lg w-full sm:w-auto">
                 NEUE AUFGABE ANFORDERN
             </button>
+
+            <div id="summary-section" class="mt-8 sm:mt-12 w-full text-left border-t-2 border-tm-ink border-dashed pt-6 sm:pt-8 hidden fade-in">
+                <h3 class="font-serif text-2xl sm:text-3xl mb-4 sm:mb-6 text-center">Der offizielle Bericht</h3>
+                <div id="summary-list" class="space-y-6 font-typewriter text-sm sm:text-base">
+                    <!-- Wird per JS befüllt -->
+                </div>
+            </div>
         </div>
     </div>
 
@@ -251,7 +258,7 @@
         let timerInterval;
         let timeLeft = 300; 
         let answeredCurrent = false;
-        
+        let quizHistory = [];        
         // Sicherstellen, dass die Fragen aus fragen.js geladen wurden
         const allQuestions = typeof questions !== 'undefined' ? questions : [];
 
@@ -323,7 +330,7 @@
             score = 0;
             maxPossibleScore = 0;
             answeredCurrent = false;
-            
+            quizHistory = [];            
             // Timer vs Punkte Anzeige
             if (currentMode === 'sim') {
                 document.getElementById('timer-display').classList.remove('hidden');
@@ -424,6 +431,17 @@
             if (answeredCurrent) return;
             answeredCurrent = true;
 
+            const q = activeQuestions[currentQuestionIndex];
+            
+            quizHistory.push({
+                question: q.question,
+                selectedAnswer: selectedBtn.innerText.replace('>', '').trim(), // > Pfeil vom CSS-Hover entfernen
+                correctAnswer: q.correctAnswer,
+                isCorrect: isCorrect,
+                points: isCorrect ? qPoints : 0,
+                maxPoints: qPoints
+            });
+
             const allBtns = document.querySelectorAll('.typewriter-btn');
             const stamp = document.getElementById('stamp-feedback');
             
@@ -454,8 +472,8 @@
                 // Das neue fragen.js hat ggf. keine 'explanation' property. 
                 // Wir entfernen den alten Text oder zeigen an, was die richtige Lösung war.
                 document.getElementById('feedback-text').innerText = isCorrect 
-                    ? "Exzellente Arbeit. Der Taskmaster ist zufrieden." 
-                    : "Absolut inakzeptabel. Der Taskmaster ist enttäuscht.";
+                    ? "Exzellente Arbeit. Der Networkmaster ist zufrieden." 
+                    : "Absolut inakzeptabel. Der Networkmaster ist enttäuscht.";
             } else {
                 document.getElementById('feedback-box').classList.remove('hidden');
                 document.getElementById('next-btn').classList.add('hidden'); // Im Sim Modus kein Next-Button
@@ -478,6 +496,22 @@
         function finishQuiz(timeUp) {
             if(timerInterval) clearInterval(timerInterval);
             
+            if (timeUp) {
+                for (let i = currentQuestionIndex; i < activeQuestions.length; i++) {
+                    if (i === currentQuestionIndex && answeredCurrent) continue;
+                    const unq = activeQuestions[i];
+                    const p = getPointsForQuestion(unq.difficulty);
+                    quizHistory.push({
+                        question: unq.question,
+                        selectedAnswer: null,
+                        correctAnswer: unq.correctAnswer,
+                        isCorrect: false,
+                        points: 0,
+                        maxPoints: p
+                    });
+                }
+            }
+
             quizScreen.classList.add('hidden');
             resultScreen.classList.remove('hidden');
             
@@ -490,11 +524,43 @@
             if (timeUp) {
                 msgEl.innerText = "Die Zeit ist abgelaufen! Deine Aufgabe wurde abgebrochen.";
             } else if (percentage >= 0.8) {
-                msgEl.innerText = "Greg Davies ist beeindruckt. 5 Punkte für diese Aufgabe!";
+                msgEl.innerText = "Der Networkmaster ist beeindruckt. 5 Punkte für diese Aufgabe!";
             } else if (percentage >= 0.5) {
                 msgEl.innerText = "Nicht großartig, aber auch kein komplettes Desaster.";
             } else {
                 msgEl.innerText = "Alex Horne musste den Kopf schütteln. Disqualifiziert!";
+            }
+
+            const summarySection = document.getElementById('summary-section');
+            const summaryList = document.getElementById('summary-list');
+            summaryList.innerHTML = ''; // Vorherige Liste leeren
+            
+            if (quizHistory.length > 0) {
+                summarySection.classList.remove('hidden');
+                quizHistory.forEach((item, index) => {
+                    const div = document.createElement('div');
+                    div.className = "pb-4 border-b border-gray-300 border-dashed last:border-0 text-left";
+                    
+                    let answerHtml = '';
+                    if (item.isCorrect) {
+                        answerHtml = `<p class="text-tm-red font-bold mt-1">Deine Antwort: ${item.selectedAnswer} ✓</p>`;
+                    } else {
+                        const userAns = item.selectedAnswer ? item.selectedAnswer : "Keine Antwort (Zeit abgelaufen)";
+                        answerHtml = `
+                            <p class="text-gray-500 line-through mt-1">Deine Antwort: ${userAns}</p>
+                            <p class="text-tm-red font-bold mt-1">Richtige Antwort: ${item.correctAnswer}</p>
+                        `;
+                    }
+
+                    div.innerHTML = `
+                        <p class="font-bold">Aufgabe ${index + 1}: ${item.question}</p>
+                        ${answerHtml}
+                        <p class="text-xs text-gray-500 mt-2 uppercase tracking-widest">${item.points} / ${item.maxPoints} Punkte</p>
+                    `;
+                    summaryList.appendChild(div);
+                });
+            } else {
+                summarySection.classList.add('hidden');
             }
         }
 
