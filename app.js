@@ -76,22 +76,23 @@ function startApp() {
     currentQuestionIndex = 0;
     score = 0;
     answeredCurrent = false;
+    document.getElementById('timer-display').classList.remove('animate-pulse', 'text-red-600');
     
     // UI Setup je nach Modus
     if (currentMode === 'sim') {
-        document.getElementById('timer-display').classList.remove('hide');
-        document.getElementById('score-display').classList.add('hide');
+        document.getElementById('timer-display').classList.remove('hidden');
+        document.getElementById('score-display').classList.add('hidden');
         timeLeft = 300;
         startTimer();
     } else {
-        document.getElementById('timer-display').classList.add('hide');
-        document.getElementById('score-display').classList.remove('hide');
+        document.getElementById('timer-display').classList.add('hidden');
+        document.getElementById('score-display').classList.remove('hidden');
         updateScoreDisplay();
     }
 
     // Bildschirme wechseln
-    startScreen.classList.add('hide');
-    quizScreen.classList.remove('hide');
+    startScreen.classList.add('hidden');
+    quizScreen.classList.remove('hidden');
     
     loadQuestion();
 }
@@ -126,8 +127,8 @@ function updateScoreDisplay() {
 
 function loadQuestion() {
     answeredCurrent = false;
-    document.getElementById('next-btn').classList.add('hide');
-    document.getElementById('feedback-box').classList.add('hide');
+    document.getElementById('next-btn').classList.add('hidden');
+    document.getElementById('feedback-box').classList.add('hidden');
     
     const q = activeQuestions[currentQuestionIndex];
     
@@ -155,6 +156,10 @@ function loadQuestion() {
         const btn = document.createElement('button');
         btn.className = 'option-btn w-full text-left p-4 rounded-xl border-2 border-gray-200 hover:border-indigo-400 bg-white text-gray-700 font-medium text-lg';
         btn.innerHTML = `<span class="inline-block w-8 h-8 rounded-full bg-gray-100 text-center leading-8 mr-3 text-sm">${String.fromCharCode(65 + index)}</span> ${opt.text}`;
+        
+        // NEU: Wir speichern heimlich im Button, ob er richtig ist!
+        btn.dataset.isCorrect = opt.isCorrect; 
+        
         btn.onclick = () => selectOption(btn, opt.isCorrect, q);
         optionsContainer.appendChild(btn);
     });
@@ -186,10 +191,10 @@ function selectOption(selectedBtn, isCorrect, questionData) {
             document.getElementById('feedback-title').className = 'font-bold mb-1 text-emerald-800';
         } else {
             selectedBtn.classList.add('wrong-ans');
-            // Richtige Antwort heraussuchen und markieren
+            // Richtige Antwort heraussuchen und markieren (JETZT ZUVERLÄSSIG!)
             allBtns.forEach(btn => {
-                if (questionData.options[questionData.correct] === btn.innerText.substring(3).trim()) {
-                     btn.classList.add('border-emerald-500', 'bg-emerald-50');
+                if (btn.dataset.isCorrect === "true") {
+                     btn.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-900');
                 }
             });
             
@@ -199,8 +204,8 @@ function selectOption(selectedBtn, isCorrect, questionData) {
         }
         
         document.getElementById('feedback-text').innerText = questionData.explanation;
-        document.getElementById('feedback-box').classList.remove('hide');
-        document.getElementById('next-btn').classList.remove('hide');
+        document.getElementById('feedback-box').classList.remove('hidden');
+        document.getElementById('next-btn').classList.remove('hidden');
 
     } else {
         // Simulations-Modus: Kein ausführliches Feedback, nur kurze farbliche Rückmeldung
@@ -229,8 +234,8 @@ function handleNext() {
 function finishQuiz(timeUp) {
     if(timerInterval) clearInterval(timerInterval);
     
-    quizScreen.classList.add('hide');
-    resultScreen.classList.remove('hide');
+    quizScreen.classList.add('hidden');
+    resultScreen.classList.remove('hidden');
     
     const total = activeQuestions.length;
     const percentage = Math.round((score / total) * 100);
@@ -264,8 +269,8 @@ function finishQuiz(timeUp) {
 }
 
 function resetApp() {
-    resultScreen.classList.add('hide');
-    startScreen.classList.remove('hide');
+    resultScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
     
     // Balken und Timer-Design zurücksetzen
     document.getElementById('final-progress').style.width = `0%`;
